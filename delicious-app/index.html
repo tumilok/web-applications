@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<title>Home Page</title>
+</head>
+<body>
+	<div class="top">
+		<header>
+			<a href="index.html" title="Home Page"><img src="image/icons/logo.png" alt="logo"></a>
+			<table>
+				<tr>
+					<td>
+						<button class="open-button" onclick="openForm()">SUBMIT A RECIPE</button>
+						<div class="form-popup" id="myForm">
+  							<form name="Form" class="form-container">
+    								<h1>Submit a recipe</h1>
+
+								<p id="notFilled"></p>
+
+								<label for="title"><b>Recipe Title</b></label>
+								<input id="title" type="text" placeholder="Enter Title" name="title" required>
+
+								<label for="url1"><b>Front Image-URL</b></label>
+								<input id="url1" type="text" placeholder="Enter URL" name="url1">
+
+								<label for="url2"><b>Bottom Image-URL</b></label>
+                                                                <input id="url2" type="text" placeholder="Enter URL" name="url2">
+
+								<label for="directions"><b>Directions</b></label>
+								<textarea id="directions" type="text" placeholder="Enter directions" name="directions" required></textarea>
+
+								<button type="button" class="btn" onclick="addRecipe()">Submit</button>
+    								<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  							</form>
+						</div>
+					</td>
+					<td><a href="" title="Login into account">LOGIN</a></td>
+					<td><a href="" title="Create new account">JOIN</a></td>
+				</tr>
+			</table>
+		</header>
+
+		<aside>
+			<div class="text">
+				<h1>Recipes</h1>
+				<hr>
+				<p>Browse Taste of Home recipes by course, cooking style, cuisine, ingredient, holiday and more categories to find a new family-favorite recipe.</p>
+			</div>
+			<div class="button"><a href="#menu" title="Check out all recipes">Explore Recipes</a></div>
+		<aside>
+	</div>
+
+	<div class="body_recipe" id="body">
+		<div class="recipe1" id="recipe1">
+			<div class="header">
+				<h1>Skillet Cinnamon Rolls</h1>
+			</div>
+			<div class="content">
+				<h2>Directions</h2>
+				<p>In a small bowl, dissolve yeast in warm milk. In a large bowl, combine sugar, butter, egg yolk, vanilla, salt, nutmeg, yeast mixture and 1 cup flour; beat on medium speed 2 minutes. Stir in enough remaining flour to form a soft dough (dough will be sticky).Turn onto a floured surface; knead until smooth and elastic, about 6-8 minutes. Place in a greased bowl, turning once to grease the top. Cover with plastic wrap and let rise in a warm place until doubled, about 1 hour.In a 10-inch cast iron or other ovenproof skillet, cook bacon over medium-low heat until crisp. Remove with a slotted spoon; drain on paper towels. Discard drippings, reserving 3 tablespoons.In the same skillet, combine brown sugar, syrup, cinnamon, nutmeg and 2 tablespoons of reserved bacon drippings; cook and stir until blended. Cool to room temperature. Wipe out skillet; grease with remaining bacon drippings.Punch dough down. Roll into an 18x12-in. rectangle. Sprinkle brown sugar mixture and bacon to within 1/2 in. of edges. Roll up jelly-roll style, starting with a short side; pinch seams to seal. Cut into 12 rolls.Place rolls, cut side down, in prepared skillet. Cover and let rise in a warm place until doubled, about 45 minutes. Preheat oven to 400°. Bake on a lower oven rack, until golden brown, 18-20 minutes. Cool 20 minutes.In a small bowl, beat frosting ingredients until smooth. Spread over warm rolls. Serve warm.</p>
+			</div>
+
+			<div class="picture">
+				<img src="image/recipe/recipe1big.jpg" alt="Skillet Cinnamon Rolls">
+			</div>
+		</div>
+
+		 <div class="recipe2" id="recipe2">
+			<div class="header">
+				<h1>Irish Stew Pie</h1>		
+			</div>
+		        <div class="content">
+	                	<h2>Directions</h2>
+                              	<p>Preheat oven to 350°. In a shallow bowl, mix 1/2 cup flour, 1/2 teaspoon salt and 1/2 teaspoon pepper. Add lamb, a few pieces at a time, and toss to coat; shake off excess. In a Dutch oven, heat oil over medium-high heat. Brown lamb in batches. Remove from pan. Add carrots and onion to same pan; cook and stir until crisp-tender, 6-8 minutes. Stir in remaining 1 tablespoon flour until blended; gradually whisk in stock. Bring to a boil, stirring to loosen browned bits from pan.Add potatoes, thyme, bay leaves, Worcestershire sauce, tomato paste, remaining 1/4 teaspoon salt, 1/4 teaspoon pepper and lamb; return to a boil. Reduce heat. Simmer, uncovered, until thickened and lamb is tender, 25-30 minutes. Discard thyme sprig and bay leaf. Stir in mint. Transfer to a greased 9-in. deep-dish pie plate. Whisk egg yolk and cream; brush around edge of pie plate to help pastry adhere.On a lightly floured surface, unfold 1 sheet puff pastry; top with remaining sheet. Roll to fit over pie plate. Carefully place over filling; trim to fit. Using a fork, press pastry firmly onto rim of pie plate to seal edge. Brush with remaining egg mixture. Cut slits in top. Place on a rimmed baking sheet. Bake until golden brown, 35-40 minutes. Let stand 10 minutes before serving.</p>
+		    	</div>
+		        <div class="picture">
+		                <img src="image/recipe/recipe2big.jpg" alt="Skillet Cinnamon Rolls">
+		        </div>
+		</div>
+		<div class="recipe3" id="recipe3">
+		        <div class="header">
+				<h1>Guinness Float</h1>
+		        </div>
+		        <div class="content">
+		               	<h2>Directions</h2>
+		               	<p>Divide ice cream between 2 glasses. Slowly top with beer; drizzle with chocolate syrup. Serve immediately.</p>
+			</div>
+		        <div class="picture">
+		               	<img src="image/recipe/recipe3big.jpg" alt="Skillet Cinnamon Rolls">
+		        </div>
+		</div>
+		<div class="recipe4" id="recipe4">
+			<div class="header">
+			        <h1>Black Forest Upside-Down Cake</h1>
+			</div>
+			<div class="content">
+			        <h2>Directions</h2>
+			       	<p>Preheat oven to 350°. Spoon pie filling into a greased 12-in. cast-iron or ovenproof skillet. In a large bowl, beat cream cheese, sugar, flour and vanilla until blended. Gently beat in eggs. Pour over pie filling. Prepare cake mix according to package directions; spoon over cream cheese layer.Bake until a toothpick inserted in center comes out clean, 40-45 minutes. Cool 10 minutes before inverting onto a serving plate. If needed, spoon cherries from pan over cake. Top with whipped cream.</p>
+			</div>
+			<div class="picture">
+			        <img src="image/recipe/recipe4big.jpg" alt="Skillet Cinnamon Rolls">
+			</div>
+		</div>
+	</div>
+
+	<div class="body_menu" id="menu">
+           	<div class="item1">
+			<a href="#body" title="Check out Skillet Cinnamon Rolls recipe">
+				<div class="flip-card">
+  					<div class="flip-card-inner" id="flip-card1" onclick="exploreRecipe(this.id, 1);">
+    						<div class="flip-card-front">
+      							<img src="image/recipe/recipe1.jpg" alt="tasty food">
+    						</div>
+    						<div class="flip-card-back">
+      							<img src="image/recipe/recipe12.jpg" alt="tasty food">
+    						</div>
+  					</div>
+				</div>
+				<p>Skillet Cinnamon Rolls</p>
+			</a>
+		</div>
+
+         	<div class="item2">
+			<a href="#body" title="Check out Irish Stew Pie recipe">
+				<div class="flip-card">
+  					<div class="flip-card-inner" id="flip-card2" onclick="exploreRecipe(this.id, 2);">
+    						<div class="flip-card-front">
+      							<img src="image/recipe/recipe2.jpg" alt="tasty food">
+    						</div>
+    						<div class="flip-card-back">
+      							<img src="image/recipe/recipe22.jpg" alt="tasty food">
+    						</div>
+ 					</div>
+				</div>
+				<p>Irish Stew Pie</p>
+			</a>
+		</div>
+            	<div class="item3">
+			<a href="#body" title="Check out Guinnes Float recipe">
+				<div class="flip-card">
+  					<div class="flip-card-inner" id="flip-card3" onclick="exploreRecipe(this.id, 3);">
+    						<div class="flip-card-front">
+      							<img src="image/recipe/recipe3.jpg" alt="tasty food">
+    						</div>
+    						<div class="flip-card-back">
+							<img src="image/recipe/recipe32.jpg" alt="tasty food">
+      						</div>
+					</div>
+				</div>
+				<p>Guinness Float</p>
+			</a>
+		</div>
+		<div class="item4">
+			<a href="#body" title="Check out Black Forest Upside-Down Cake recipe">
+				<div class="flip-card">
+  					<div class="flip-card-inner" id="flip-card4" onclick="exploreRecipe(this.id, 4);">
+    						<div class="flip-card-front">
+							<img src="image/recipe/recipe4.jpg" alt="tasty food">
+    						</div>
+    						<div class="flip-card-back">
+      							<img src="image/recipe/recipe42.jpg" alt="tasty food">
+    						</div>
+ 					</div>
+				</div>
+				<p>Black Forest Upside-Down Cake</p>
+			</a>
+		</div>
+        </div>
+
+	<footer>
+		<div class="item1"><a href="index.html" title="Home Page"><img src="image/icons/logo.png" alt="logo"></a></div>
+		<div class="item2">
+			<table>
+				<tr>
+					<td><a href="" title="Home Page">Home</a></td>
+					<td><a href="" title="Check out all recipes">Recipes</a></td>
+					<td><a href="" title="Best dishes for Holidays">Holidays</a></td>
+				</tr>
+				<tr>
+					<td><a href="" title="Best tools">Kitchen</a></td>
+					<td><a href="" title="Our contest">Contests</a></td>
+					<td><a href="" title="Everything about food">Food News</a></td>
+				</tr>
+				<tr>
+					<td><a href="" title="Our Magazines">Magazines</a></td>
+					<td><a href="" title="Everything about this blog">About Us</a></td>
+					<td><a href="" title="Help">How-To</a></td>
+				</tr>
+			</table>
+		</div>
+		<div class="item3">
+			<h6>Follow us on:</h6>
+			<a href="https://www.facebook.com/" target="_blank" title="Check out our facebook page"><img src="image/icons/facebook.png" alt="facebook"></a>
+			<a href="https://www.instagram.com/" target="_blank" title="Check out our instagram page"><img src="image/icons/instagram.png" alt="instagram"></a>
+			<a href="https://twitter.com/" target="_blank" title="Check out our twitter page"><img src="image/icons/twitter.png" alt="twitter"></a>
+                       	<a href="https://www.pinterest.com/" target="_blank" title="Check out our pinterest page"><img src="image/icons/pinterest.png" alt="pinterest"></a>
+			<a href="https://www.youtube.com/" target="_blank" title="Check out our youtube page"><img src="image/icons/youtube.png" alt="youtube"></a>
+		</div>
+		<div class="item4"></div>
+		<div class="item5"><i><b><a href="https://github.com/Tumilok" target="_blank" title="github">© 2019 Tumilok production</a></b></i></div>
+		<div class="item6"></div>
+	</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

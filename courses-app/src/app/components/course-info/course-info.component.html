@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="info">
+        <h2>{{ course.name }}</h2>
+        <ul>
+            <li>ECTS: {{ course.ects }}</li>
+            <li>Semester: {{ course.semesterNumber }}</li>
+            <li>Class format: {{ course.classFormat }}</li>
+            <li>Maximum number of students: {{ course.maxStudents }}</li>
+        </ul>
+        <h4>Description</h4>
+        <p>{{ course.description }}</p>
+    </div>
+    <div class="picture">
+        <img src="{{ course.iconPath }}" class="rounded float-right" alt="Course icon">
+        <app-course-rate [course]="course"></app-course-rate>
+    </div>
+    <button routerLink="/courses" routerLinkActive="active">Back</button>
+</div>

@@ -1,0 +1,20 @@
+<div class="add" routerLink="/add-course" routerLinkActive="active">
+    <button class="btn btn-primary">Add Course</button>
+</div>
+<div class="change-mode" routerLink="/courses" routerLinkActive="active">
+    <button class="btn btn-primary">User mode</button>
+</div>
+
+<h1>Courses</h1>
+<div class="filter">
+    <input [(ngModel)]="searchText0" placeholder="Course Name">
+    <input [(ngModel)]="searchText1" placeholder="ECTS">
+    <input [(ngModel)]="searchText2" placeholder="Semester">
+    <input [(ngModel)]="searchText3" placeholder="Rating">
+</div>
+<div class="container">
+    <app-admin-course-item
+        *ngFor="let course of courses | filter: searchText0 | filterByEcts: searchText1 | filterBySemester: searchText2 | filterByRating: searchText3"
+        [course]="course" (delete)="deleteCourse(course)">
+    </app-admin-course-item>
+</div>

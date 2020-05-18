@@ -1,0 +1,23 @@
+<div class="container">
+  
+    <div class="product">
+      <div class="img-container">
+        <img src="{{ course.iconPath }}">
+      </div>
+      <div class="product-info">
+        <div class="product-content">
+          <h1>{{ course.name }}</h1>
+          <app-course-rate [course]="course"></app-course-rate>
+          <ul>
+            <li>Class Format: {{ course.classFormat }}</li>
+            <li>ECTS: {{ course.ects }}</li>
+            <li>Semester: {{ course.semesterNumber }}</li>
+          </ul>
+          <div class="buttons">
+            <button class="button checkout" routerLink="{{ course.id }}" routerLinkActive="active">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+

@@ -1,0 +1,531 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  	margin: 0 auto;
+  	max-width: 75%;
+	padding: 1em 0;
+}
+
+@media (max-width: 1600px) {
+	body {
+		max-width: 85%;
+	}
+}
+
+@media (max-width: 1200px) {
+        body {
+                max-width: 93%;
+        }
+}
+
+@media (max-width: 800px) {
+        body {
+                max-width: 100%;
+        }
+}
+
+/**************************************************************************************************/
+
+.top {
+	display: grid;
+	grid-template-columns: 2% auto 2%;
+	grid-template-rows: auto auto;
+	background-image: url("image/textured-bg.png");
+        background-repeat: repeat repeat;
+}
+
+.top header {
+	background: white;
+	grid-column: 2/3;
+	grid-row: 1/2;
+	margin-bottom: 30px;
+}
+
+.top header img {
+       	width: 300px;
+	float: left;
+	margin: 1%;
+	max-width: 300px;
+}
+
+.top header table {
+	float: center;
+        font-family: Arial;
+	text-align: center;
+	float: right;
+	margin: 3%;
+}
+
+.top header table a:link, .top header table a:visited {
+        color: gray;
+        font-size: 20px;
+        text-decoration: none;
+        margin: 10px;
+}
+
+.top * {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.top .open-button {
+  	background-color: #f44336;
+  	color: white;
+  	padding: 16px 20px;
+  	border: none;
+  	cursor: pointer;
+  	width: 200px;
+	font-size: 120%;
+}
+
+.top .open-button:hover {
+	background-color: red;
+}
+
+/* The popup form - hidden by default */
+.top .form-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.top .form-container {
+	max-width: 650px;
+	padding: 10px;
+	background-color: white;
+}
+
+/* Full-width input fields */
+.top .form-container input[type=text], .top .form-container textarea {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.top .form-container input[type=text]:focus, .top .form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.top .form-container .btn {
+  	background-color: #4CAF50;
+  	color: white;
+  	padding: 16px 20px;
+  	border: none;
+  	cursor: pointer;
+  	width: 100%;
+ 	margin-bottom:10px;
+}
+
+/* Add a red background color to the cancel button */
+.top .form-container .cancel {
+  	background-color: #f44336;
+}
+
+.top .form-container .btn:hover {
+	background-color: green;
+}
+
+.top .form-container .cancel:hover {
+	background-color: red;
+}
+
+#notFilled {
+	color: red;
+}
+
+.top aside {
+	grid-column: 2/3;
+	grid-row: 2/3;
+	margin-bottom: 3%;
+	text-align: center;
+}
+
+.top aside .button a:link, .top aside .button a:visited {
+	color: white;
+        background-color: #f44336;
+        padding: 1% 6%;
+        font-size: 250%;
+        text-decoration: none;
+        display: inline-block;
+
+}
+
+.top aside .button a:hover, .top aside .button a:active {
+	background-color: red;
+}
+
+.top aside .text {
+	margin-bottom: 8%;
+	color: gray;
+	font-family: Arial;
+}
+
+.top aside .text h1 {
+	font-size: 250%;
+	margin-bottom: 0px;	
+}
+
+.top .text hr {
+	margin-left: 8%;
+	margin-right: 8%;
+}
+
+.top aside .text p {
+	font-size: 160%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+@media (max-width: 800px) {
+	.top header img {
+		width: 80%;
+	}
+
+	.top header table {
+       		margin: 1%;
+	}
+
+	.top aside .button {
+        	padding: 1% 5%;
+	}
+
+	.top aside .button a:link, .top aside .button a:visited {
+		font-size: 200%;
+	}
+
+}
+
+@media (max-width: 550px) {
+	.top header table a:link, .top header table a:visited {
+                font-size: 15px;
+                margin: 5px;
+       }
+}
+
+/**************************************************************************************************/
+
+.body_recipe {
+	display: grid;
+	background-image: url("image/textured-bg.png");
+	background-repeat: repeat repeat;
+	grid-template-columns: auto;
+	padding-bottom: 40px;
+}
+
+.body_recipe > div {
+	grid-template-columns: 2% auto auto 2%;
+	grid-template-rows: auto auto auto;
+	padding-bottom: 40px;
+	color: gray;
+	font-family: Arial;
+	display: none;
+}
+
+.body_recipe > div .header {
+	grid-column: 2/3;
+	grid-row: 1/2;
+	text-align: center;
+}
+
+.body_recipe > div .content {
+	grid-column: 2/3;
+	grid-row: 2/4;
+	padding: 10px;
+	padding-right: 80px;
+}
+
+.body_recipe > div .picture {
+	grid-column: 3/4;
+	grid-row: 2/3;
+	padding-left: auto;
+	padding-right: auto;
+}
+
+.body_recipe > div .picture img {
+	width: 500px;
+	height: 500px;
+}
+
+.body_recipe .header h1 {
+	font-size: 300%;
+}
+
+.body_recipe .content h2 {
+	font-size: 200%;
+}
+
+.body_recipe .content p {
+	font-size: 140%;
+}
+
+.body_recipe .content .deleteButton {
+	width: 20px;
+	height: 20px;
+}
+
+@media (max-width: 1200px) {
+	.body_recipe .picture img {
+                width: 80%;
+                height: 80%;
+        }
+}
+
+@media (max-widht: 1000px) {
+	.body_recipe .picture img {
+		width: 70%;
+		height: 70%;
+	}
+}
+
+@media (max-width: 900px) {
+        .body_recipe > div .header {
+                grid-column: 2/4;
+                grid-row: 1/2;
+        } 
+        .body_recipe > div .content {
+                grid-column: 2/4;
+                grid-row: 3/4;
+        }
+        .body_recipe > div .picture {
+                grid-column: 2/4;
+                grid-row: 2/3;
+		text-align: center;
+        }
+
+	.body_recipe > div .picture img {
+		width: 90%;
+		height: 90%;
+	}
+
+	.body_recipe .content h1 {
+		font-size: 250%;
+	}
+
+	.body_recipe .content p {
+		font-size: 120%;
+	}
+}
+
+@media (max-width: 500px) {
+	.body_recipe .header h1 {
+		font-size: 200%;
+	}
+
+	.body_recipe .content p {
+		font-size: 90%;
+	}
+}
+
+/**************************************************************************************************/
+
+.body_menu {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	background-image: url("image/textured-bg.png");
+	background-repeat: repeat repeat;
+	grid-gap: 1px;
+	text-align: center;
+}
+
+.body_menu > div {
+  	color: gray;
+  	text-align: center;
+  	font-size: 160%;
+  	font-family: Arial;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.body_menu img {
+	max-width: 300px;
+	width: 100%;
+}
+
+.body_menu a {
+	color: gray;
+	text-decoration: none;
+}
+
+.body_menu p {
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flip-card {
+  	background-color: transparent;
+  	width: 300px;
+  	height: 300px;
+  	perspective: 1000px;
+}
+
+.flip-card-inner {
+  	position: relative;
+  	width: 100%;
+  	height: 100%;
+  	text-align: center;
+  	transition: transform 0.6s;
+  	transform-style: preserve-3d;
+  	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card-front, .flip-card-back {
+  	position: absolute;
+  	width: 100%;
+  	height: 100%;
+  	backface-visibility: hidden;
+}
+
+.flip-card-front {
+  	background-color: #bbb;
+  	color: black;
+}
+
+.flip-card-back {
+  	background-color: #2980b9;
+  	color: white;
+  	transform: rotateY(180deg);
+}
+
+@media (max-width: 1400px) {
+
+	.body_menu {
+        	display: grid;
+        	grid-template-columns: 50% 50%;
+	}
+}
+
+
+@media (max-width: 850px) {
+
+	.body_menu {
+        	display: grid;
+        	grid-template-columns: 100%;
+	}
+}
+
+/**************************************************************************************************/
+
+footer {
+	display: grid;
+	background-image: url("image/textured-bg.png");
+        background-repeat: repeat repeat;
+	grid-template-columns: 2% 25% 30% 20% auto 2%;
+	grid-template-rows: auto auto;
+}
+
+footer .item1 {
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+
+footer .item2 {
+	grid-column: 3/5;
+	grid-row: 1/2;
+}
+
+footer .item3 {
+	grid-column: 5/6;
+	grid-row: 1/2;
+}
+
+footer .item4 {
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+
+footer .item5 {
+	grid-column: 3/5;
+	grid-row: 2/3;
+	font-size: 90%;
+        text-align: center;
+        padding: 10px;
+
+}
+
+footer .item6 {
+	grid-column: 5/6;
+	grid-row: 2/3;
+}
+
+footer > div {
+        background: white;
+        color: gray;
+        font-family: Arial;
+        text-align: center;
+}
+
+footer a {
+	text-decoration: none;
+	color: gray;
+}
+
+footer .item1 img {
+	width: 80%;
+	padding-left: 10px;
+	padding-top: 10px;
+	max-width: 400px;
+}
+
+footer .item2 table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer .item2 td {
+	width: 150px;
+	height: 25px;
+}
+
+footer .item3 h6 {
+	font-size: 120%;
+	margin: 10px;
+	text-align: left;
+}
+
+footer .item3 img {
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	margin-top: 0px;
+}
+
+@media (max-width: 1200px) {
+	footer .item1 {
+		grid-column: 2/6;
+		grid-row: 1/2;
+	}
+	footer .item2 {
+		grid-column: 2/6;
+		grid-row: 2/3;
+	}
+	footer .item3 {
+		grid-column: 2/6;
+		grid-row: 3/4;		
+	}
+	footer .item3 h6 {
+		text-align: center;
+	}
+	footer .item4 {
+		grid-column: 2/6;
+		grid-row: 4/5;
+	}
+	footer .item5 {
+		grid-column: 2/6;
+		grid-row: 5/6;
+	}
+	footer .item6 {
+		grid-column: 2/6;
+		grid-row: 6/7;
+	}
+}

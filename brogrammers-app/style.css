@@ -1,0 +1,116 @@
+.home {
+	background-image: url('images/home.jpg');
+	background-position: center;
+	position: relative;
+	text-align: center;
+	min-height: 100vh;
+}
+
+.home .text {
+	position: absolute;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+        color: black;
+        font-family: Arial;
+	text-align: center;
+}
+
+.home .text h1 {
+        font-size: 250%;
+        margin-bottom: 0px;
+}
+
+.home .text hr {
+	border-top: 2px solid black;
+        margin-left: 8%;
+        margin-right: 8%;
+}
+
+.home .text p {
+        font-size: 160%;
+        margin-left: 10%;
+        margin-right: 10%;
+}
+
+.home .text .button a:link, .home .text .button a:visited {
+        color: white;
+        background-color: blue;
+        padding: 1% 6%;
+        font-size: 250%;
+        text-decoration: none;
+        display: inline-block;
+
+}
+
+.home .text .button a:hover, .home .text .button a:active {
+        background-color: lightblue;
+}
+
+.services {
+	min-height: 100vh;
+	padding-top: 10%;
+}
+
+.services p {
+	text-align: left;
+	margin-left: 6%;
+	margin-right: 6%;
+	font-family: Arial;
+}
+
+.services h1 {
+	margin-top: 5%;
+	font-family: Arial;
+	font-size: 250%;
+}
+
+.services .row {
+	text-align: center;
+}
+
+.services .row img {
+	max-width: 400px;
+	max-height: 400px;
+	width: 100%;
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+  /*---Firefox Bug Fix --*/
+  .carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+.h2 {
+  margin: 60px;
+  text-align: justify;
+}
+
+form {
+	padding: 5%;
+	min-height: 50vh;
+}
+
+form .form-row {
+	margin-bottom: 15px;
+}
+
+footer {
+	text-align: center;
+	font-family: Arial;
+	background-color: lightgray;
+	padding-top: 1%;
+	font-size: 90%;
+	color: gray;
+}

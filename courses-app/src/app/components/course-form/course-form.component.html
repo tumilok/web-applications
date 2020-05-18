@@ -1,0 +1,115 @@
+<div class="container">
+    <form novalidate
+        [formGroup]="myform"
+        (ngSubmit)="onSubmit()">
+  
+        <div class="form-group"
+            [ngClass]="{
+            'has-danger': name.invalid && (name.dirty || name.touched),
+            'has-success': name.valid && (name.dirty || name.touched)
+         }">
+            <label>Course Name</label>
+            <input type="text"
+                    class="form-control"
+                    formControlName="name"
+                    required>
+            <div class="form-control-feedback"
+                    *ngIf="name.errors && (name.dirty || name.touched)">
+                <p *ngIf="name.errors.required">Course Name is required</p>
+            </div>    
+        </div>
+
+        <div class="form-group"
+            [ngClass]="{
+            'has-danger': ects.invalid && (ects.dirty || ects.touched),
+            'has-success': ects.valid && (ects.dirty || ects.touched)
+        }">
+            <label>ECTS</label>
+            <input type="text"
+                    class="form-control"
+                    formControlName="ects"
+                    required>
+            <div class="form-control-feedback"
+                    *ngIf="ects.errors && (ects.dirty || ects.touched)">
+                <p *ngIf="ects.errors.required">ECTS is required</p>
+                <p *ngIf="ects.errors.pattern">ECTS range is a number</p>
+            </div>
+        </div>
+  
+        <div class="form-group"
+            [ngClass]="{
+            'has-danger': semesterNumber.invalid && (semesterNumber.dirty || semesterNumber.touched),
+            'has-success': semesterNumber.valid && (semesterNumber.dirty || semesterNumber.touched)
+        }">
+            <label>Semester</label>
+            <input type="text"
+                    class="form-control"
+                    formControlName="semesterNumber"
+                    required>
+            <div class="form-control-feedback"
+                *ngIf="semesterNumber.errors && (semesterNumber.dirty || semesterNumber.touched)">
+                <p *ngIf="semesterNumber.errors.required">Semester is required</p>
+                <p *ngIf="semesterNumber.errors.pattern">Semester is a number</p>
+            </div>  
+        </div>
+  
+        <div class="form-group"
+            [ngClass]="{
+            'has-danger': classFormat.invalid && (classFormat.dirty || classFormat.touched),
+            'has-success': classFormat.valid && (classFormat.dirty || classFormat.touched)
+        }">
+            <label>Class Format</label>
+            <select class="form-control"
+                    formControlName="classFormat">
+                <option value="">Please select a class Format</option>
+                <option *ngFor="let classFormat of classFormats"
+                        [value]="classFormat">{{classFormat}}
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group"
+            [ngClass]="{
+            'has-danger': maxStudents.invalid && (maxStudents.dirty || maxStudents.touched),
+            'has-success': maxStudents.valid && (maxStudents.dirty || maxStudents.touched)
+        }">
+            <label>Maximum number of students</label>
+            <input type="text"
+                    class="form-control"
+                    formControlName="maxStudents"
+                    required>
+            <div class="form-control-feedback"
+                *ngIf="maxStudents.errors && (maxStudents.dirty || maxStudents.touched)">
+                <p *ngIf="maxStudents.errors.required">Semester is required</p>
+                <p *ngIf="maxStudents.errors.pattern">Semester is a number</p>
+            </div>  
+        </div>
+
+        <div class="form-group"
+            [ngClass]="{
+            'has-danger': iconPath.invalid && (iconPath.dirty || iconPath.touched),
+            'has-success': iconPath.valid && (iconPath.dirty || iconPath.touched)
+        }">
+            <label>Icon URL</label>
+            <input type="text"
+                    class="form-control"
+                    formControlName="iconPath"
+            >  
+        </div>
+
+        <div class="form-group"
+            [ngClass]="{
+            'has-danger': description.invalid && (description.dirty || description.touched),
+            'has-success': description.valid && (description.dirty || description.touched)
+        }">
+            <label>Description</label>
+            <input type="text"
+                    class="form-control"
+                    formControlName="description"
+            >  
+        </div>
+  
+        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+        <button id="hide" class="btn btn-primary" routerLink="/admin-courses" routerLinkActive="active">Cancel</button>
+    </form>
+</div>

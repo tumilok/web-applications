@@ -1,0 +1,17 @@
+.container {
+    margin-bottom: 50px;
+}
+
+.add {
+    margin-bottom: 10px;
+}
+
+#submit {
+    float: left;
+    margin-left: 10px;
+}
+
+#hide {
+    float: right;
+    margin-right: 10px;
+}

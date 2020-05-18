@@ -1,0 +1,25 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="assets/img/logo.jpg" id="icon" alt="Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="signInForm">
+      <input type="email" formControlName="email" id="login" class="fadeIn second" name="login" placeholder="login">
+      <input type="password" formControlName="password" id="password" class="fadeIn third" name="login" placeholder="password">
+      <label class="message">{{ errorMessage }}</label>
+      <label class="message">{{ successMessage }}</label>
+      <input type="submit" class="fadeIn fourth" value="Log In" (click)="trySignIn(signInForm.value)">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" routerLink="/register" routerLinkActive="active">Haven't got an acount?</a>
+    </div>
+
+  </div>
+</div>
