@@ -5,3 +5,4 @@ This repo contains projects from Introduction to Web Apps class (WDAI)
 * [Brogrammers App](brogrammers-app) is a portfolio of a small IT team based on Bootstrap4
 * [Courses App](courses-app) is a list of courses on which students can enroll. Created with the help of the Angular framework
 
+[Chek out demo!](https://tumilok.github.io/web-applications/)
